@@ -1,4 +1,5 @@
 const jsonServer = require('json-server')
+const auth = require('json-server-auth')
 const clone = require('clone')
 const data = require('./db.json')
 
@@ -19,6 +20,7 @@ server.use((req, res, next) => {
     next()
 })
 
+server.use(auth)
 server.use(router)
 server.listen(process.env.PORT || 8000, () => {
     console.log('JSON Server is running')
