@@ -1,0 +1,16 @@
+{
+  "name": "security-starter-react-backend",
+  "packageManager": "yarn@3.6.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "watch": "json-server-auth --watch db.json --port=8000"
+  },
+  "dependencies": {
+    "clone": "^2.1.2",
+    "express": "^4.18.2",
+    "json-server": "^0.17.3",
+    "json-server-auth": "^2.1.0"
+  }
+}
