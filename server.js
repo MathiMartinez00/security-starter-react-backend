@@ -12,6 +12,8 @@ const router = jsonServer.router(isProductionEnv ? clone(data) : 'db.json', {
 })
 const middlewares = jsonServer.defaults()
 
+server.db = router.db
+
 server.use(middlewares)
 
 server.use((req, res, next) => {
